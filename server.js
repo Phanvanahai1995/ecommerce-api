@@ -128,8 +128,12 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Connected from MongoDB");
-    server.listen(port, () => {
-      console.log(`Server running on port ${port}`);
+    server.listen(process.env.PORT, () => {
+      console.log(`Hello Server`);
     });
+
+    // server.listen(port, () => {
+    //   console.log(`Server running on port ${port}`);
+    // });
   })
   .catch((err) => console.log(err));
