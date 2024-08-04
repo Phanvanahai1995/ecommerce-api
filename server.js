@@ -19,12 +19,14 @@ const socket = require("socket.io");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [process.env.CORS_URL_1, process.env.CORS_URL_2],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: [process.env.CORS_URL_1, process.env.CORS_URL_2],
+//     credentials: true,
+//   })
+// );
+
+app.use(cors());
 
 const server = http.createServer(app);
 
